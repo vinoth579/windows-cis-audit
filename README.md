@@ -7,12 +7,6 @@ Simple PowerShell-based CIS benchmark scanner for Windows systems.
 This project is a lightweight Windows security auditing tool written in PowerShell.  
 It performs basic CIS-style security checks on a Windows machine and reports PASS/FAIL results.
 
-The goal of this project is to:
-- Learn PowerShell scripting
-- Understand Windows security hardening
-- Practice CIS benchmark auditing
-- Build a beginner cybersecurity portfolio project
-
 ---
 
 ## Current Features
