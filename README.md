@@ -1,6 +1,6 @@
 # Windows CIS Audit Tool
 
-Simple PowerShell-based CIS benchmark scanner for Windows systems.
+PowerShell-based CIS benchmark scanner for Windows systems.
 
 ## Overview
 
