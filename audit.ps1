@@ -21,3 +21,32 @@ if ($smb.State -eq "Disabled") {
 else {
     Write-Host "[FAIL] SMBv1 Enabled"
 }
+
+# Windows Defender Check
+$defender = Get-MpComputerStatus
+
+if ($defender.RealTimeProtectionEnabled -eq $true) {
+    Write-Host "[PASS] Windows Defender Real-Time Protection Enabled"
+}
+else {
+    Write-Host "[FAIL] Windows Defender Real-Time Protection Disabled"
+}
+
+# Password Policy Check
+Write-Host "`n=== Password Policy ==="
+
+$passwordPolicy = net accounts
+
+$passwordPolicy
+
+# Guest Account Check
+Write-Host "`n=== Guest Account Check ==="
+
+$guest = Get-LocalUser -Name "Guest"
+
+if ($guest.Enabled -eq $false) {
+    Write-Host "[PASS] Guest account is disabled"
+}
+else {
+    Write-Host "[FAIL] Guest account is enabled"
+}
